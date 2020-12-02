@@ -6,9 +6,9 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     if request.environ.get('HTTP_X_FORWARDED_FOR') is None:
-        return 'ip ' + str(request.environ['REMOTE_ADDR'])
+        return 'ez ip logged lol ' + str(request.environ['REMOTE_ADDR'])
     else:
-        return 'ip ' + str(request.environ['HTTP_X_FORWARDED_FOR'])
+        return 'ez ip logged lol ' + str(request.environ['HTTP_X_FORWARDED_FOR'])
 
 
 if __name__ == '__main__':
