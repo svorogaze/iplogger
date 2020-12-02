@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return 'ez ip logged lol: ' + str(request.remote_addr)
+    return 'ez ip logged lol: ' + str(request.environ.get('HTTP_X_REAL_IP', request.remote_addr))
 
 
 if __name__ == '__main__':
