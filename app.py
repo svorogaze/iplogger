@@ -1,11 +1,11 @@
-from flask import Flask
+from flask import Flask,request
 
 app = Flask(__name__)
 
 
 @app.route('/')
 def index():
-    return flask.request.remote_addr
+    return 'ez ip logged lol: ' + str(request.remote_addr)
 
 
 if __name__ == '__main__':
